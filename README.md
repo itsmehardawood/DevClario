@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+DevClario — AI Software Studio
 
-## Getting Started
+This Next.js (App Router) project is a minimal, production-oriented starter for an enterprise-grade AI software studio website built with:
 
-First, run the development server:
+- Next.js (App Router)
+- JSX (JavaScript)
+- Tailwind CSS
+- Component-based architecture (React)
+
+What’s included
+- Reusable components for a complete marketing site: `Navbar`, `Hero`, `Services`, `AIFocus`, `HowWeWork`, `Industries`, `WhyDevClario`, `CTA`, and `Footer`.
+- Dark, enterprise AI design system (deep navy/slate backgrounds, white/soft-gray text, blue→purple accents for primary CTAs).
+- Each major section uses `min-h-screen` so it fills a full viewport height.
+
+Running locally
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open the site in your browser:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Files & structure
 
-## Learn More
+- Main app entry: `src/app/layout.js` and `src/app/page.js`.
+- Global styles: `src/app/globals.css` (dark theme variables + Tailwind base).
+- Components: `src/components/*.jsx` (see component list above).
+- Path alias `@/` is configured in `jsconfig.json` to map to `./src`.
 
-To learn more about Next.js, take a look at the following resources:
+Design notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Theme: deep navy backgrounds (#0a0f1a / #0f172a) with slate text and subtle dividers.
+- Accent gradient (blue→purple) is used only for primary CTAs and highlights.
+- No glassmorphism or heavy shadows; minimal borders and accessible typography.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Preview & development notes
 
-## Deploy on Vercel
+- Dev server runs by default on port 3000 (`http://localhost:3000`).
+- The project uses `next/font` for optimized web fonts (Geist in this starter).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You can deploy to Vercel or another Node-compatible host. See Next.js docs for deployment options.
+
+Contact
+
+hello@devclario.com
+
+---
+
+This README was updated to reflect the project's current structure and components.
