@@ -5,8 +5,72 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "AI & GenAI", href: "#ai-focus" },
+  {
+    name: "Services",
+    href: "#services",
+    mega: [
+      {
+        title: "Product Engineering",
+        description: "Platforms, automation, and intelligent operations",
+        items: [
+          { label: "Generative AI Products", href: "#services" },
+          { label: "Automation & DevOps", href: "#services" },
+          { label: "Platform Modernization", href: "#services" },
+        ],
+      },
+      {
+        title: "Customer Experience",
+        description: "Connected journeys powered by AI",
+        items: [
+          { label: "Conversational Agents", href: "#services" },
+          { label: "Personalization", href: "#services" },
+          { label: "Data-driven Growth", href: "#services" },
+        ],
+      },
+      {
+        title: "Intelligent Operations",
+        description: "Systems that learn while they run",
+        items: [
+          { label: "Workflow Automation", href: "#services" },
+          { label: "Observability & Ops", href: "#services" },
+          { label: "AI Governance", href: "#services" },
+        ],
+      },
+    ],
+  },
+  {
+    name: "AI & GenAI",
+    href: "#ai-focus",
+    mega: [
+      {
+        title: "Foundation Models",
+        description: "Building on trusted models and fine-tuning",
+        items: [
+          { label: "Model Selection", href: "#ai-focus" },
+          { label: "Custom Tuning", href: "#ai-focus" },
+          { label: "Responsible AI", href: "#ai-focus" },
+        ],
+      },
+      {
+        title: "Enterprise AI",
+        description: "Embedding intelligence inside core systems",
+        items: [
+          { label: "Knowledge Graphs", href: "#ai-focus" },
+          { label: "AI Copilots", href: "#ai-focus" },
+          { label: "Ops Intelligence", href: "#ai-focus" },
+        ],
+      },
+      {
+        title: "Enablement",
+        description: "Governance, training, and adoption",
+        items: [
+          { label: "Capability Building", href: "#ai-focus" },
+          { label: "Playbooks", href: "#ai-focus" },
+          { label: "Program Strategy", href: "#ai-focus" },
+        ],
+      },
+    ],
+  },
   { name: "Industries", href: "#industries" },
   { name: "How We Work", href: "#how-we-work" },
   { name: "Company", href: "#why-devclario" },
@@ -14,31 +78,78 @@ const navLinks = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0f1a] border-b border-slate-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm border-b border-slate-800/20">
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="#" className="text-xl font-bold text-white tracking-tight"> 
-      <Image src="/images/DevClario_transparent.png" alt="DevClario Logo" width={200} height={200} />
+      <Image src="/images/DevClario_transparent.png" alt="DevClario Logo" width={150} height={200} />
 
             </Link>
                       </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 relative">
             {navLinks.map((link) => (
-              <a
+              <div
                 key={link.name}
-                href={link.href}
-                className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
+                className="relative"
+                onMouseEnter={() => link.mega && setActiveDropdown(link.name)}
+                onMouseLeave={() => link.mega && setActiveDropdown(null)}
               >
-                {link.name}
-              </a>
+                <a
+                  href={link.href}
+                  className="text-sm text-slate-300 hover:text-white transition-colors duration-200 inline-flex items-center gap-1"
+                >
+                  {link.name}
+                  {link.mega && (
+                    <span className="text-xs text-slate-500">
+                      ⌄
+                    </span>
+                  )}
+                </a>
+              </div>
             ))}
           </div>
+
+          {/* Mega Dropdown */}
+          {activeDropdown && navLinks.find(l => l.name === activeDropdown)?.mega && (
+            <div 
+              className="fixed left-0 right-0 top-16 z-40 h-[50vh] border-t border-slate-700/40 bg-gradient-to-b from-slate-900 to-slate-900 backdrop-blur-md shadow-2xl"
+              onMouseEnter={() => setActiveDropdown(activeDropdown)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <div className="max-w-7xl mx-auto h-full px-8 py-10">
+                <div className="grid h-full grid-cols-1 gap-10 md:grid-cols-3">
+                  {navLinks.find(l => l.name === activeDropdown)?.mega.map((group) => (
+                    <div key={group.title} className="space-y-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+                        {group.title}
+                      </p>
+                      <p className="text-sm text-slate-300 leading-relaxed">
+                        {group.description}
+                      </p>
+                      <div className="space-y-2">
+                        {group.items.map((item) => (
+                          <a
+                            key={item.label}
+                            href={item.href}
+                            className="text-base font-medium text-white hover:text-blue-400 transition-colors duration-200 block"
+                          >
+                            {item.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* CTA Button */}
           <div className="hidden md:block">
@@ -71,7 +182,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-800">
+          <div className="md:hidden py-4 border-t border-slate-800/20 bg-black/10 backdrop-blur-sm">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a

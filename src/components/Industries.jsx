@@ -55,24 +55,37 @@ export default function Industries() {
         </div>
 
         {/* Industries Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {industries.map((industry) => (
             <div
               key={industry.title}
-              className="group p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:border-slate-600 transition-all duration-300"
+              className="group relative h-[320px] p-8 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/40 border border-slate-700/50 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2 flex flex-col"
             >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-slate-700/50 text-slate-300 group-hover:text-blue-400 flex items-center justify-center mb-5 transition-colors duration-300">
-                {industry.icon}
-              </div>
+              {/* Background Glow Effect */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Content Wrapper */}
+              <div className="relative flex flex-col h-full">
+                {/* Icon */}
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-700/60 to-slate-800/60 text-slate-300 group-hover:text-blue-400 group-hover:scale-110 flex items-center justify-center mb-6 transition-all duration-500 shadow-lg">
+                  {industry.icon}
+                </div>
 
-              {/* Content */}
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {industry.title}
-              </h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
-                {industry.description}
-              </p>
+                {/* Content */}
+                <div className="flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                    {industry.title}
+                  </h3>
+                  <p className="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                    {industry.description}
+                  </p>
+                </div>
+
+                {/* Bottom Accent */}
+                <div className="mt-auto pt-6">
+                  <div className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:w-full transition-all duration-500" />
+                </div>
+              </div>
             </div>
           ))}
         </div>

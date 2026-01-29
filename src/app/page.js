@@ -7,6 +7,7 @@ import Industries from "@/components/Industries";
 import WhyDevClario from "@/components/WhyDevClario";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
@@ -15,8 +16,11 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+           <Stats/>
+           <HowWeWork />
         <AIFocus />
-        <HowWeWork />
+     
+        
         <Industries />
         <WhyDevClario />
         <CTA />

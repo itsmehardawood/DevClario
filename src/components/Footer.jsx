@@ -45,7 +45,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <a href="#" className="text-xl font-bold text-white tracking-tight">
-      <Image src="/images/DevClario_transparent.png" alt="DevClario Logo" width={200} height={100} />
+      <Image src="/images/DevClario_transparent.png" alt="DevClario Logo" width={150} height={100} />
             </a>
             <p className="mt-4 text-sm text-slate-400 max-w-xs leading-relaxed">
               Building intelligent digital systems with AI. We design, develop,
