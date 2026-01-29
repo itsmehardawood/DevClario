@@ -47,7 +47,7 @@ export default function WhyDevClario() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Header */}
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl  text-white mb-6">
               Why Teams Choose DevClario
             </h2>
             <p className="text-lg text-slate-400 leading-relaxed">
@@ -60,9 +60,11 @@ export default function WhyDevClario() {
 
           {/* Right Column - Reasons */}
           <div className="grid sm:grid-cols-2 gap-6">
-            {reasons.map((reason) => (
+            {reasons.map((reason, index) => (
               <div
                 key={reason.title}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="p-6 rounded-xl bg-slate-800/30 border border-slate-700/50"
               >
                 {/* Icon */}

@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
-            <a href="#" className="text-xl font-bold text-white tracking-tight">
+            <a href="/" className="text-xl font-bold text-white tracking-tight">
       <Image src="/images/DevClario_transparent.png" alt="DevClario Logo" width={150} height={100} />
             </a>
             <p className="mt-4 text-sm text-slate-400 max-w-xs leading-relaxed">
@@ -55,7 +55,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="mt-6 flex gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/devclario/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-600 transition-all duration-200"
@@ -117,13 +117,13 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-slate-800/50">
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-sm text-slate-500">
             <a
-              href="mailto:hello@devclario.com"
+              href="mailto:contactdevclario@gmail.com"
               className="flex items-center gap-2 hover:text-slate-300 transition-colors duration-200"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              hello@devclario.com
+             contactdevclario@gmail.com
             </a>
           </div>
         </div>

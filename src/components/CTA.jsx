@@ -2,12 +2,12 @@ export default function CTA() {
   return (
     <section
       id="cta"
-      className="min-h-screen flex items-center bg-[#0a0f1a] py-24"
+      className=" flex items-center bg-[#0a0f1a] py-24"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
         <div className="max-w-3xl mx-auto text-center">
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font text-white mb-6">
             Let's Build Something Intelligent
           </h2>
           
@@ -19,8 +19,8 @@ export default function CTA() {
 
           {/* CTA Button */}
           <a
-            href="mailto:hello@devclario.com"
-            className="inline-flex items-center justify-center px-10 py-4 text-lg font-medium text-white rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all duration-200"
+            href="/contact"
+            className="inline-flex items-center justify-center px-10 py-4 text-lg font-medium text-white  bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-500 hover:to-purple-500 transition-all duration-200"
           >
             Book a Call
             <svg

@@ -35,7 +35,7 @@ export default function HowWeWork() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font- text-white mb-4">
             From Business Problem to Intelligent System
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
@@ -52,7 +52,7 @@ export default function HowWeWork() {
             {/* Steps */}
             <div className="grid grid-cols-5 gap-6">
               {steps.map((step, index) => (
-                <div key={step.number} className="relative">
+                <div key={step.number} className="relative" data-aos="fade-up" data-aos-delay={index * 100}>
                   {/* Step Number */}
                   <div className="relative z-10 w-16 h-16 rounded-full bg-[#0f172a] border-2 border-slate-700 flex items-center justify-center mb-6 mx-auto">
                     <span className="text-sm font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -84,7 +84,7 @@ export default function HowWeWork() {
             {/* Steps */}
             <div className="space-y-8">
               {steps.map((step, index) => (
-                <div key={step.number} className="relative flex gap-6">
+                <div key={step.number} className="relative flex gap-6" data-aos="fade-right" data-aos-delay={index * 100}>
                   {/* Step Number */}
                   <div className="relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-[#0f172a] border-2 border-slate-700 flex items-center justify-center">
                     <span className="text-sm font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">

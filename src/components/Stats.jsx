@@ -72,7 +72,9 @@ export default function Stats() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="p-6 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/40 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10"
+                data-aos="flip-left"
+                data-aos-delay={index * 100}
+                className="p-6  flex flex-col items-center justify-center text-center rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/40 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10"
               >
                 <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3">
                   {stat.number}

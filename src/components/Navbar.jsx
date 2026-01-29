@@ -79,6 +79,7 @@ const navLinks = [
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm border-b border-slate-800/20">
@@ -86,7 +87,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="#" className="text-xl font-bold text-white tracking-tight"> 
+            <Link href="/" className="text-xl font-bold text-white tracking-tight"> 
       <Image src="/images/DevClario_transparent.png" alt="DevClario Logo" width={150} height={200} />
 
             </Link>
@@ -98,8 +99,23 @@ export default function Navbar() {
               <div
                 key={link.name}
                 className="relative"
-                onMouseEnter={() => link.mega && setActiveDropdown(link.name)}
-                onMouseLeave={() => link.mega && setActiveDropdown(null)}
+                onMouseEnter={() => {
+                  if (link.mega) {
+                    if (dropdownTimeout) {
+                      clearTimeout(dropdownTimeout);
+                      setDropdownTimeout(null);
+                    }
+                    setActiveDropdown(link.name);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (link.mega) {
+                    const timeout = setTimeout(() => {
+                      setActiveDropdown(null);
+                    }, 100);
+                    setDropdownTimeout(timeout);
+                  }
+                }}
               >
                 <a
                   href={link.href}
@@ -120,8 +136,19 @@ export default function Navbar() {
           {activeDropdown && navLinks.find(l => l.name === activeDropdown)?.mega && (
             <div 
               className="fixed left-0 right-0 top-16 z-40 h-[50vh] border-t border-slate-700/40 bg-gradient-to-b from-slate-900 to-slate-900 backdrop-blur-md shadow-2xl"
-              onMouseEnter={() => setActiveDropdown(activeDropdown)}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => {
+                if (dropdownTimeout) {
+                  clearTimeout(dropdownTimeout);
+                  setDropdownTimeout(null);
+                }
+                setActiveDropdown(activeDropdown);
+              }}
+              onMouseLeave={() => {
+                const timeout = setTimeout(() => {
+                  setActiveDropdown(null);
+                }, 100);
+                setDropdownTimeout(timeout);
+              }}
             >
               <div className="max-w-7xl mx-auto h-full px-8 py-10">
                 <div className="grid h-full grid-cols-1 gap-10 md:grid-cols-3">
