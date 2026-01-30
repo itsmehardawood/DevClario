@@ -5,17 +5,17 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="min-h-screen flex items-center bg-[#0f172a] py-24"
+      className="min-h-screen flex items-center bg-gradient-to-b from-[#040811] to-[#1a2536] py-16 sm:py-24"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
        
 
         {/* Services Grid - two column: left intro, right stacked services */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Column - Intro / Big Heading */}
           <div className="flex flex-col justify-center">
             <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">Our Capabilities</p>
-            <h2 className="text-5xl md:text-6xl text-white leading-tight mb-4">Software & AI
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4 break-words">Software & AI
               <span className="text-blue-400"> Designed to Scale</span>
             </h2>
             <p className="text-lg text-slate-400 max-w-xl">

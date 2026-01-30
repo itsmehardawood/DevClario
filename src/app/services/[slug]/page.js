@@ -38,8 +38,8 @@ export default function ServicePage({ params }) {
       <Navbar />
       <main className="bg-[#0a0f1a]">
         {/* Hero Section */}
-        <section className="min-h-[60vh] flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] py-24 pt-32">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+        <section className="min-h-[60vh] flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] py-16 sm:py-24 pt-24 sm:pt-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-4xl">
               <Link 
                 href="/#services" 
@@ -55,7 +55,7 @@ export default function ServicePage({ params }) {
                 {service.icon}
               </div>
               
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 break-words">
                 {service.heroTitle}
               </h1>
               
@@ -67,11 +67,11 @@ export default function ServicePage({ params }) {
         </section>
 
         {/* Features Grid */}
-        <section className="py-24 bg-[#0a0f1a]">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-16">
+        <section className="py-16 sm:py-24 bg-[#0a0f1a]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
               <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">Capabilities</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 break-words px-2">
                 What We Deliver
               </h2>
               <p className="text-lg text-slate-400 max-w-3xl mx-auto">
@@ -79,7 +79,7 @@ export default function ServicePage({ params }) {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {service.features.map((feature, index) => (
                 <div
                   key={index}
@@ -103,10 +103,10 @@ export default function ServicePage({ params }) {
         </section>
 
         {/* Technologies Section */}
-        <section className="py-24 bg-[#1e293b]/50">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-16 sm:py-24 bg-[#1e293b]/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 break-words px-2">
                 Technologies We Use
               </h2>
               <p className="text-lg text-slate-400">
@@ -130,12 +130,12 @@ export default function ServicePage({ params }) {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-24 bg-[#0a0f1a]">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <section className="py-16 sm:py-24 bg-[#0a0f1a]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <div>
                 <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">Benefits</p>
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 break-words">
                   Why Choose Our {service.title}
                 </h2>
                 <p className="text-lg text-slate-400 mb-8">
@@ -165,9 +165,9 @@ export default function ServicePage({ params }) {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-gradient-to-br from-blue-600 to-blue-800">
-          <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <section className="py-16 sm:py-24 bg-gradient-to-br from-blue-600 to-blue-800">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 break-words">
               {service.cta.title}
             </h2>
             <p className="text-xl text-blue-100 mb-10">

@@ -2,12 +2,12 @@ export default function CTA() {
   return (
     <section
       id="cta"
-      className=" flex items-center bg-[#0a0f1a] py-24"
+      className="flex items-center bg-[#0a0f1a] py-16 sm:py-24"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-3xl mx-auto text-center">
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-6 break-words">
             Let's Build Something Intelligent
           </h2>
           

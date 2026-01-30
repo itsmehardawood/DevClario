@@ -82,8 +82,8 @@ export default function Navbar() {
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm border-b border-slate-800/20">
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -182,7 +182,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <a
               href="#cta"
-              className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all duration-200"
+              className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-white  bg-gradient-to-r from-blue-600 to-purple-800 hover:from-blue-500 hover:to-purple-500 transition-all duration-200"
             >
               Let's Talk
             </a>
@@ -209,21 +209,21 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-800/20 bg-black/10 backdrop-blur-sm">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden absolute left-0 right-0 top-16 bg-slate-900/98 backdrop-blur-md border-b border-slate-800/50 shadow-xl">
+            <div className="flex flex-col gap-4 px-4 sm:px-6 py-6 max-h-[calc(100vh-4rem)] overflow-y-auto">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm text-slate-300 hover:text-white transition-colors duration-200"
+                  className="text-sm text-slate-300 hover:text-white transition-colors duration-200 py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {link.name}
+                  {link.name}  
                 </a>
               ))}
               <a
                 href="#cta"
-                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all duration-200 mt-2"
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white  bg-gradient-to-r from-blue-600 to-purple-800 hover:from-blue-500 hover:to-purple-500 transition-all duration-200 mt-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Let's Talk

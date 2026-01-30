@@ -45,12 +45,12 @@ export default function Industries() {
   return (
     <section
       id="industries"
-      className="min-h-screen flex items-center bg-[#0a0f1a] py-24"
+      className="min-h-screen flex items-center bg-gradient-to-b to-[#040811] from-[#1a2536] py-16 sm:py-24"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 break-words px-2">
             Designed for Complex Business Environments
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
@@ -59,13 +59,13 @@ export default function Industries() {
         </div>
 
         {/* Industries Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
           {industries.map((industry, index) => (
             <div
               key={industry.title}
               data-aos="zoom-in"
               data-aos-delay={index * 100}
-              className="relative h-[420px] p-8 bg-slate-900/80 border border-slate-700/30 transition-all duration-500 flex flex-col overflow-hidden group"
+              className="relative h-[380px] sm:h-[420px] p-6 sm:p-8 bg-slate-900/80 border border-slate-700/30 transition-all duration-500 flex flex-col overflow-hidden group"
             >
               {/* Background Image - Appears on Hover */}
               <div 

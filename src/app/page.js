@@ -16,11 +16,10 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-           <Stats/>
-           <HowWeWork />
+        <Stats />
+        <HowWeWork />
         <AIFocus />
-     
-        
+
         <Industries />
         <WhyDevClario />
         <CTA />

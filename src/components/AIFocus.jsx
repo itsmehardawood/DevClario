@@ -10,18 +10,18 @@ export default function AIFocus() {
   return (
     <section
       id="ai-focus"
-      className="min-h-screen flex items-center bg-[#0a0f1a] py-24"
+      className="min-h-screen flex items-center bg-[#0a0f1a] py-16 sm:py-24"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl  text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 break-words px-2">
             AI That Works Inside Your Business
           </h2>
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left Column - Explanation */}
           <div className="space-y-6" data-aos="fade-right">
             <p className="text-lg text-slate-300 leading-relaxed">

@@ -2,19 +2,19 @@
 export default function Stats() {
   const stats = [
     {
-      number: "48+",
+      number: "11+",
       label: "Years of continual excellence",
     },
     {
-      number: "7700+",
+      number: "300+",
       label: "Change makers driving revolution",
     },
     {
-      number: "16+",
+      number: "18+",
       label: "Countries with our presence and clientele",
     },
     {
-      number: "300+",
+      number: "10+",
       label: "Active clients across the globe",
     },
   ];
@@ -42,14 +42,14 @@ export default function Stats() {
   return (
     <section
       id="stats"
-      className="min-h-screen flex flex-col justify-center bg-[#0a0f1a] py-24"
+      className="min-h-screen flex flex-col justify-center bg-[#0a0f1a] py-16 sm:py-24"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Main Content - Text Left, Stats Right */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-12 sm:mb-20">
           {/* Left Column - Text Content */}
-          <div className="flex flex-col gap-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
+          <div className="flex flex-col gap-4 sm:gap-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight break-words">
               Translating technology into a positive impact
             </h2>
             <p className="text-lg text-slate-400 leading-relaxed">
@@ -68,7 +68,7 @@ export default function Stats() {
           </div>
 
           {/* Right Column - Stats Grid */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <div
                 key={index}
@@ -88,8 +88,8 @@ export default function Stats() {
         </div>
 
         {/* Bottom Tagline */}
-        <div className="text-center mb-12">
-          <p className="text-3xl text-slate-400 max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <p className="text-xl sm:text-2xl md:text-3xl text-slate-400 max-w-3xl mx-auto break-words px-2">
             We rethink business growth for you through our collective experience
             with strategic partner ecosystem.
           </p>

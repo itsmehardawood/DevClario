@@ -61,8 +61,8 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-24 bg-[#0a0f1a]">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8">
+    <section className="py-16 sm:py-24 bg-[#0a0f1a]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {submitStatus.type === "success" ? (
           /* Success Screen */
           <div className="text-center" data-aos="zoom-in">
@@ -85,7 +85,7 @@ export default function ContactForm() {
               </div>
 
               {/* Success Message */}
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 break-words">
                 Thank You!
               </h2>
               <p className="text-xl text-slate-300 mb-4">
@@ -146,17 +146,17 @@ export default function ContactForm() {
           <>
             {/* Header */}
             <div className="text-center mb-12" data-aos="fade-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl  text-white mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 break-words px-2">
                 Let's Build Something Amazing
               </h1>
-              <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto px-2">
                 Tell us about your project and we'll get back to you within 24 hours.
               </p>
             </div>
 
         {/* Contact Form */}
         <div
-          className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-8 md:p-12"
+          className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 sm:p-8 md:p-12"
           data-aos="fade-up"
           data-aos-delay="100"
         >
