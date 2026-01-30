@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 export default function Stats() {
   const stats = [
     {
@@ -109,11 +110,12 @@ export default function Stats() {
                 key={`tech-1-${index}`}
                 className="flex-shrink-0 w-14 h-14 flex items-center justify-center opacity-100 transition-all duration-300"
               >
-                <img
+                <Image
                   src={tech}
                   alt={`Technology ${index + 1}`}
-                  width="60"
-                  height="60"
+                  width={60}
+                  height={60}
+                  unoptimized
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
@@ -124,11 +126,12 @@ export default function Stats() {
                 key={`tech-2-${index}`}
                 className="flex-shrink-0 w-14 h-14 flex items-center justify-center opacity-100 transition-all duration-300"
               >
-                <img
+                <Image
                   src={tech}
                   alt={`Technology ${index + 1}`}
-                  width="48"
-                  height="48"
+                  width={48}
+                  height={48}
+                  unoptimized
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
